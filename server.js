@@ -29,9 +29,8 @@ rtm.on(RTM_EVENTS.MESSAGE, (message) => {
     let text = message.text;
     const attachments = message.attachments;
 
-    text = user.name + '\n' + text;
     web.chat.postMessage(process.env.DESTINATION_SLACK_CHANNEL, text, {
-      username: 'Jotch Bot',
+      username: user.profile.real_name,
       attachments
     }, () => {});
   }
