@@ -11,7 +11,7 @@ const sourceToken = process.env.SOURCE_SLACK_API_TOKEN;
 const destinationToken = process.env.DESTINATION_SLACK_API_TOKEN;
 
 const rtm = new RtmClient(sourceToken, {
-  logLevel: 'debug',
+  logLevel: 'error',
   dataStore: new MemoryDataStore()
 });
 const web = new WebClient(destinationToken);
